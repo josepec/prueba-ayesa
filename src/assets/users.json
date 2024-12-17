@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "primerApellido": "Pérez",
+      "segundoApellido": "García",
+      "tipo": "demandante",
+      "nifPasaporte": "12345678Z",
+      "genero": "Masculino",
+      "fechaNacimiento": "1990-05-12",
+      "direccion": {
+        "calle": "Calle Falsa",
+        "numero": "123",
+        "puerta": "A",
+        "codigoPostal": "28001",
+        "ciudad": "Madrid"
+      },
+      "estudios": [
+        {
+          "nombreInstitucion": "Universidad de Madrid",
+          "titulacion": "Ingeniería",
+          "fecha": "2012-06-30"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Ana",
+      "primerApellido": "Gómez",
+      "segundoApellido": "López",
+      "tipo": "empleado",
+      "nifPasaporte": "87654321X",
+      "genero": "Femenino",
+      "fechaNacimiento": "1985-10-25",
+      "direccion": {
+        "calle": "Avenida Libertad",
+        "numero": "10",
+        "puerta": "B",
+        "codigoPostal": "28002",
+        "ciudad": "Madrid"
+      },
+      "experienciaLaboral": [
+        {
+          "nombreEmpresa": "Empresa ABC",
+          "puestoTrabajo": "Desarrolladora",
+          "fecha": "2015-09-01"
+        }
+      ]
+    }
+  ]
+  

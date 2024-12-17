@@ -1,0 +1,48 @@
+.tabs {
+    display: flex;
+    margin-bottom: 1em;
+  
+    button {
+      background-color: #f0f0f0;
+      border: none;
+      padding: 0.5em 1em;
+      margin-right: 0.5em;
+      cursor: pointer;
+  
+      &.active {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+      }
+  
+      &:hover {
+        background-color: #0056b3;
+        color: white;
+      }
+    }
+  }
+  
+  .tab-content {
+    border: 1px solid #ccc;
+    padding: 1em;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-actions {
+    margin-top: 1em;
+    
+    button {
+      padding: 0.5em 1em;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-right: 1em;
+  
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+  

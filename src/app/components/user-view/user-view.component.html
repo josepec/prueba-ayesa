@@ -1,0 +1,40 @@
+<div class="user-view">
+    <h1>Detalle del Usuario</h1>
+
+    <div *ngIf="user">
+        <div class="user-details">
+            <h2>Datos Personales</h2>
+            <p><strong>Nombre:</strong> {{ user.nombre }} {{ user.primerApellido }} {{ user.segundoApellido }}</p>
+            <p><strong>Género:</strong> {{ user.genero }}</p>
+            <p><strong>Fecha de nacimiento:</strong> {{ user.fechaNacimiento | date }}</p>
+            <p><strong>NIF o Pasaporte:</strong> {{ user.nifPasaporte }}</p>
+
+            <h3>Dirección</h3>
+            <p><strong>Calle:</strong> {{ user.direccion.calle }}</p>
+            <p><strong>Número:</strong> {{ user.direccion.numero }}</p>
+            <p><strong>Puerta:</strong> {{ user.direccion.puerta }}</p>
+            <p><strong>Código Postal:</strong> {{ user.direccion.codigoPostal }}</p>
+            <p><strong>Ciudad:</strong> {{ user.direccion.ciudad }}</p>
+
+            <h3 *ngIf="user.tipo === 'empleado'">Experiencia Laboral</h3>
+            <div *ngIf="user.tipo === 'empleado'">
+                <div *ngFor="let exp of user.experienciaLaboral">
+                    <p><strong>Empresa:</strong> {{ exp.nombreEmpresa }}</p>
+                    <p><strong>Puesto:</strong> {{ exp.puestoTrabajo }}</p>
+                    <p><strong>Fecha:</strong> {{ exp.fecha | date }}</p>
+                </div>
+            </div>
+
+            <h3 *ngIf="user.tipo === 'demandante'">Estudios</h3>
+            <div *ngIf="user.tipo === 'demandante'">
+                <div *ngFor="let estudio of user.estudios">
+                    <p><strong>Institución:</strong> {{ estudio.nombreInstitucion }}</p>
+                    <p><strong>Titulación:</strong> {{ estudio.titulacion }}</p>
+                    <p><strong>Fecha:</strong> {{ estudio.fecha | date }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button routerLink="/">Volver al Listado</button>
+</div>
