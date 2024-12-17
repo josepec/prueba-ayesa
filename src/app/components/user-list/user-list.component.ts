@@ -40,8 +40,7 @@ export class UserListComponent implements OnInit {
 
   deleteUser(user: any): void {
     if (confirm(`¿Está seguro de que desea borrar el usuario ${user.nombre}?`)) {
-      this.users = this.users.filter((u) => u.id !== user.id);
-      this.filteredUsers = [...this.users];
+      this.userService.deleteUser(user.id);
     }
   }
 
